@@ -1,0 +1,14 @@
+name: 'Build and Publish Docker Image to GitHub Container Registry'
+description: 'Build Docker Image from the latest release and pushes it to GitHub Container Registry'
+author: 'The Software Development Team at InfoRLife SA <dev@inforlife.ch>'
+branding:
+  icon: 'code'
+  color: 'blue'
+inputs:
+  pat:
+    description: 'Personal Access Token'
+    required: true
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
