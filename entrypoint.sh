@@ -9,7 +9,7 @@ fi
 RELEASE_TAG=${GITHUB_REF:10}
 
 # login with new container registry url and PAT
-echo ${INPUT_PAT} | docker login ghcr.io -u ${INPUT_OWNER} --password-stdin
+echo ${INPUT_PAT} | docker login ghcr.io -u ${GITHUB_REPOSITORY_OWNER} --password-stdin
 # new container registry urls added
 docker build --build-arg RELEASE_TAG=${RELEASE_TAG} --tag ghcr.io/${GITHUB_REPOSITORY}:${RELEASE_TAG} --cache-from ghcr.io/${INPUT_ORGANIZATION}/${REPO}:latest .
 docker push ghcr.io/${GITHUB_REPOSITORY}:${RELEASE_TAG}

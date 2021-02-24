@@ -17,7 +17,6 @@ jobs:
       uses: inforlife/publish-docker-image-to-github-container-registry-action
 @2021.1
       with:
-        owner: ${{github.repository_owner}}
         pat: ${{ secrets.CR_PAT }}
 ```
 ## Secrets
