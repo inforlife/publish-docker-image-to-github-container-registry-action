@@ -2,7 +2,7 @@
 set -e
 
 if [ -z "${INPUT_PAT}" ]; then
-  echo "PAT not found. Add a Personal Access Token with `read:packages` & `read:packages` permissions to te repository's secrets and then `pat: ${{ secrets.CR_PAT }}` to the workflow file."
+  echo "PAT not found. Add a Personal Access Token with `read:packages` & `read:packages` permissions to the repository's secrets and then `pat: ${{ secrets.CR_PAT }}` to the workflow file."
   exit 1
 fi
 
