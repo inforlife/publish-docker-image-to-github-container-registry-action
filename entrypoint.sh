@@ -11,7 +11,7 @@ RELEASE_TAG=${GITHUB_REF:10}
 # login with new container registry url and PAT
 echo ${INPUT_CONTAINER_PAT} | docker login ghcr.io -u ${GITHUB_REPOSITORY_OWNER} --password-stdin
 # new container registry urls added
-docker build --build-arg RELEASE_TAG=${RELEASE_TAG} --build-arg RR_PAT=${INPUT_RUBYGEMS_PAT} --tag ghcr.io/inforlife/${GITHUB_REPOSITORY}:${RELEASE_TAG} --cache-from ghcr.io/inforlife/${REPO}:latest .
-docker push ghcr.io/inforlife/${GITHUB_REPOSITORY}:${RELEASE_TAG}
+docker build --build-arg RELEASE_TAG=${RELEASE_TAG} --build-arg RR_PAT=${INPUT_RUBYGEMS_PAT} --tag ghcr.io/${GITHUB_REPOSITORY}:${RELEASE_TAG} --cache-from ghcr.io/inforlife/${REPO}:latest .
+docker push ghcr.io/${GITHUB_REPOSITORY}:${RELEASE_TAG}
 
 docker logout
