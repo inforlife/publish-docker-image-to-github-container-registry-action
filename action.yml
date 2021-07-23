@@ -5,8 +5,12 @@ branding:
   icon: 'code'
   color: 'blue'
 inputs:
-  pat:
-    description: 'Personal Access Token'
+  container_pat:
+    description: 'Personal Access Token to push image to GH Container registry'
+    required: true
+    default: ''
+   rubygems_pat:
+    description: 'Personal Access Token to access GH RubyGems registry'
     required: true
     default: ''
 runs:
