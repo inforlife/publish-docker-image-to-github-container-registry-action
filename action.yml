@@ -9,7 +9,7 @@ inputs:
     description: 'Personal Access Token to push image to GH Container registry'
     required: true
     default: ''
-   rubygems_pat:
+  rubygems_pat:
     description: 'Personal Access Token to access GH RubyGems registry'
     required: true
     default: ''
